@@ -1,0 +1,22 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = albarrync
+	email = albarrync@gmail.com
+[color]
+	ui = true
+[push]
+    default = current
+[alias]
+	co = checkout
+	di = diff
+[core]
+	editor = nvim
+	autocrlf = input
+	safecrlf = true
+	excludesfile = /Users/alexb/.gitignore_global
+[pull]
+	rebase = false
