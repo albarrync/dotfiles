@@ -18,9 +18,15 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- LSP
-  use 'neovim/nvim-lspconfig'
   use 'onsails/lspkind-nvim'
   use { 'weilbith/nvim-code-action-menu', cmd = 'CodeActionMenu' }
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
+  use 'neovim/nvim-lspconfig'
+
+  -- Copilot
+  use 'zbirenbaum/copilot.lua'
+  use 'zbirenbaum/copilot-cmp'
 
   -- Autocomplete
   use 'hrsh7th/nvim-cmp'
@@ -30,6 +36,7 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-calc'
   use 'hrsh7th/cmp-cmdline'
+  use({"L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*"})
   use 'ray-x/cmp-treesitter'
   use 'quangnguyen30192/cmp-nvim-tags'
   use 'honza/vim-snippets'
@@ -48,7 +55,6 @@ return require('packer').startup(function(use)
 
   -- Syntax
   use 'moll/vim-node'
-  use 'tpope/vim-rails'
   use 'editorconfig/editorconfig-vim'
   use 'chrisbra/csv.vim'
   use 'npxbr/glow.nvim'
@@ -62,64 +68,52 @@ return require('packer').startup(function(use)
   use 'ryanoasis/vim-devicons'
 
   -- Status Line and Bufferline
-  use 'famiu/feline.nvim' -- Status Line
+  use 'feline-nvim/feline.nvim'
   use 'romgrk/barbar.nvim' -- Tab Bar
 
   -- Telescope
-  use 'nvim-lua/popup.nvim'
   use 'nvim-lua/plenary.nvim'
-  use 'nvim-telescope/telescope.nvim'
+  use 'nvim-lua/popup.nvim'
   use 'nvim-telescope/telescope-fzy-native.nvim'
+  use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-project.nvim'
-  
-  -- Github
-  use {'pwntester/octo.nvim', config=function()
-    require"octo".setup()
-  end}
+  use 'BurntSushi/ripgrep'
+  use 'sharkdp/fd'
 
   -- Explorer
   use 'kyazdani42/nvim-tree.lua'
 
   -- Color
   use 'crivotz/nvim-colorizer.lua'
-  use 'lpinilla/vim-codepainter' -- Paint Code Different Colors
 
   -- Git
-  use { 'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'} }
-  use 'kdheepak/lazygit.nvim'
+  use { 'lewis6991/gitsigns.nvim', requires = 'nvim-lua/plenary.nvim' }
   use 'rhysd/committia.vim'
 
   -- Registers & clipboard
   use 'tversteeg/registers.nvim'
-  use 'AckslD/nvim-neoclip.lua'
 
   -- Move & Search & replace
-  use 'dyng/ctrlsf.vim'
   use 'kevinhwang91/nvim-hlslens'
-  use 'ggandor/lightspeed.nvim'
   use 'karb94/neoscroll.nvim'
-  use 'dstein64/nvim-scrollview'
   use 'chaoren/vim-wordmotion'
 
-  -- Tim Pope Docet
-  use 'tpope/vim-surround'
-  use 'tpope/vim-repeat'
-  use 'tpope/vim-endwise'
-  use 'tpope/vim-dispatch'
-  use 'tpope/vim-jdaddy'
-  use 'tpope/vim-fugitive'
+  -- Pope
   use 'tpope/vim-commentary'
-  -- use 'github/copilot.vim'
-
+  use 'tpope/vim-dispatch'
+  use 'tpope/vim-endwise'
+  use 'tpope/vim-fugitive'
+  use 'tpope/vim-haml'
+  use 'tpope/vim-jdaddy'
+  use 'tpope/vim-rails'
+  use 'tpope/vim-repeat'
+  use 'tpope/vim-surround'
 
   -- Colorscheme
   use 'joshdick/onedark.vim'
 
   -- General Plugins
-  use 'mhinz/vim-startify'
-  use 'jeffkreeftmeijer/vim-numbertoggle'
-  use 'numtostr/FTerm.nvim'
-  use 'wfxr/minimap.vim'
   use 'folke/todo-comments.nvim'
+  use 'numtostr/FTerm.nvim'
   use 'luukvbaal/stabilize.nvim'
 end)

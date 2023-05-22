@@ -39,9 +39,16 @@ map('n', '<leader>ff', ':Telescope find_files<cr>', options)
 map('n', '<leader>fg', ':Telescope live_grep<cr>', options)
 map('n', '<leader>fb', ':Telescope buffers<cr>', options)
 
--- Minimap
-map('n', '<leader>mm', ':MinimapToggle<cr>', options)
-
 -- Easy Align
 vim.api.nvim_set_keymap('x', 'ga', '<Plug>(EasyAlign)', {noremap = false, silent = false})
 vim.api.nvim_set_keymap('n', 'ga', '<Plug>(EasyAlign)', {noremap = false, silent = false})
+
+-- Diffview
+vim.api.nvim_set_keymap('n', '<leader>do', ':DiffviewOpen<cr>', options)
+vim.api.nvim_set_keymap('n', '<leader>dc', ':DiffviewClose<cr>', options)
+vim.api.nvim_set_keymap('n', '<leader>dh', ':DiffviewFileHistory %<cr>', options)
+
+-- Dispatch
+map('n', '<leader>df', ':Dispatch rspec %<cr>', options)
+map('n', '<leader>dt', ':Dispatch rspec<cr>', options)
+
