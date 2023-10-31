@@ -29,7 +29,7 @@ map('n', '<Esc>', ':noh<cr>', options)
 -- Bufferline
 map('n', '<Tab>', ':BufferNext<cr>', options)
 map('n', '<S-Tab>', ':BufferPrevious<cr>', options)
-map('n', '<C-x>', ':BufferClose<cr>', options)
+map('n', '<leader>w', ':BufferClose<cr>', options)
 
 -- NVim Tree
 map('n', '<leader>n', ':NvimTreeToggle<cr>', options)
@@ -52,3 +52,14 @@ vim.api.nvim_set_keymap('n', '<leader>dh', ':DiffviewFileHistory %<cr>', options
 map('n', '<leader>df', ':Dispatch rspec %<cr>', options)
 map('n', '<leader>dt', ':Dispatch rspec<cr>', options)
 
+-- Harpoon
+local ui = require("harpoon.ui")
+local mark = require("harpoon.mark")
+vim.keymap.set("n", "<leader>ho", ui.toggle_quick_menu)
+vim.keymap.set("n", "<leader>ha", mark.add_file)
+vim.keymap.set("n", "<leader>hr", mark.rm_file)
+vim.keymap.set("n", "<leader>hc", mark.clear_all)
+vim.keymap.set("n", "<leader>h1", function() ui.nav_file(1) end)
+vim.keymap.set("n", "<leader>h2", function() ui.nav_file(2) end)
+vim.keymap.set("n", "<leader>h3", function() ui.nav_file(3) end)
+vim.keymap.set("n", "<leader>h4", function() ui.nav_file(4) end)
