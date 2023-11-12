@@ -61,6 +61,10 @@ key_bindings:
   - { key: W, mods: Command, chars: "\x06\x26" }
     # 'TMUX - Leader - x' Kill Tab
   - { key: E, mods: Command, chars: "\x06\x78" }
+    # 'TMUX - Leader - %' Vertical Split
+  - { key: V, mods: Command | Shift, chars: "\x06\x25" }
+    # 'TMUX - Leader - "' Horizontal Split
+  - { key: H, mods: Command | Shift, chars: "\x06\x22" }
     # Select window 1-0
   - { key: Key1, mods: Command, chars: "\x06\x31" }
   - { key: Key2, mods: Command, chars: "\x06\x32" }
