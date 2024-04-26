@@ -1,172 +1,45 @@
 live_config_reload = true
 
-[colors.bright]
-black = "#32302f"
-blue = "#83a598"
-cyan = "#3fd7e5"
-green = "#b8bb26"
-magenta = "#d3869b"
-red = "#fb4933"
-white = "#ffffc8"
-yellow = "#fabd2f"
-
-[colors.dim]
-black = "#1d2021"
-blue = "#2b3c44"
-cyan = "#205161"
-green = "#232b0f"
-magenta = "#4e3d45"
-red = "#421e1e"
-white = "#f4e8ba"
-yellow = "#4d3b27"
-
-[colors.normal]
-black = "#282828"
-blue = "#076678"
-cyan = "#00a7af"
-green = "#79740e"
-magenta = "#8f3f71"
-red = "#9d0006"
-white = "#fdf4c1"
-yellow = "#b57614"
-
-[colors.primary]
-background = "#000000"
-foreground = "#fdf4c1"
+[colors]
+bright = { black = "#32302f", blue = "#83a598", cyan = "#3fd7e5", green = "#b8bb26", magenta = "#d3869b", red = "#fb4933", white = "#ffffc8", yellow = "#fabd2f" }
+dim = { black = "#1d2021", blue = "#2b3c44", cyan = "#205161", green = "#232b0f", magenta = "#4e3d45", red = "#421e1e", white = "#f4e8ba", yellow = "#4d3b27" }
+normal = { black = "#282828", blue = "#076678", cyan = "#00a7af", green = "#79740e", magenta = "#8f3f71", red = "#9d0006", white = "#fdf4c1", yellow = "#b57614" }
+primary = { background = "#000000", foreground = "#fdf4c1" }
 
 [font]
 size = 17
-
-[font.normal]
-family = "CodeNewRoman Nerd Font Mono"
+normal = { family = "CodeNewRoman Nerd Font Mono" }
 
 # tmux
 # use `xxd -psd` in Terminal to get hexdumped keymaps
 # via Josh Medeski Youtube
-# 'TMUX - Leader - c' Create new Tab
-[[keyboard.bindings]]
-chars = "\u0006c"
-key = "T"
-mods = "Command"
-
-# 'TMUX - Leader - &' Close Tab
-[[keyboard.bindings]]
-chars = "\u0006&"
-key = "W"
-mods = "Command"
-
-# 'TMUX - Leader - x' Close Pane
-[[keyboard.bindings]]
-chars = "\u0006x"
-key = "E"
-mods = "Command"
-
-# 'TMUX - Leader - %' VSplit
-[[keyboard.bindings]]
-chars = "\u0006%"
-key = "V"
-mods = "Command | Shift"
-
-# 'TMUX - Leader - "' HSplit
-[[keyboard.bindings]]
-chars = "\u0006\""
-key = "H"
-mods = "Command | Shift"
-
-# 'TMUX - Leader - ,' Rename Tab
-[[keyboard.bindings]]
-chars = "\u0006,"
-key = "R"
-mods = "Command"
-
-# 'TMUX - Leader - 1' Tab #
-[[keyboard.bindings]]
-chars = "\u00061"
-key = "Key1"
-mods = "Command"
-
-# 'TMUX - Leader - 2' Tab #
-[[keyboard.bindings]]
-chars = "\u00062"
-key = "Key2"
-mods = "Command"
-
-# 'TMUX - Leader - 3' Tab #
-[[keyboard.bindings]]
-chars = "\u00063"
-key = "Key3"
-mods = "Command"
-
-# 'TMUX - Leader - 4' Tab #
-[[keyboard.bindings]]
-chars = "\u00064"
-key = "Key4"
-mods = "Command"
-
-# 'TMUX - Leader - 5' Tab #
-[[keyboard.bindings]]
-chars = "\u00065"
-key = "Key5"
-mods = "Command"
-
-# 'TMUX - Leader - 6' Tab #
-[[keyboard.bindings]]
-chars = "\u00066"
-key = "Key6"
-mods = "Command"
-
-# 'TMUX - Leader - 7' Tab #
-[[keyboard.bindings]]
-chars = "\u00067"
-key = "Key7"
-mods = "Command"
-
-# 'TMUX - Leader - 8' Tab #
-[[keyboard.bindings]]
-chars = "\u00068"
-key = "Key8"
-mods = "Command"
-
-# 'TMUX - Leader - 9' Tab #
-[[keyboard.bindings]]
-chars = "\u00069"
-key = "Key9"
-mods = "Command"
-
-# 'TMUX - Leader - 0' Tab #
-[[keyboard.bindings]]
-chars = "\u00060"
-key = "Key0"
-mods = "Command"
-
-# 'TMUX - Leader - l' Jump Right
-[[keyboard.bindings]]
-chars = "\u0006l"
-key = "Right"
-mods = "Command"
-
-# 'TMUX - Leader - h' Jump Left
-[[keyboard.bindings]]
-chars = "\u0006h"
-key = "Left"
-mods = "Command"
-
-# 'TMUX - Leader - k' Jump Up
-[[keyboard.bindings]]
-chars = "\u0006k"
-key = "Up"
-mods = "Command"
-
-# 'TMUX - Leader - j' Jump Down
-[[keyboard.bindings]]
-chars = "\u0006j"
-key = "Down"
-mods = "Command"
+[keyboard]
+bindings = [
+{ chars = "\u0006s", key = "S", mods = "Command" }, # 'TMUX - Leader - s' Session Switcher
+{ chars = "\u0006c", key = "T", mods = "Command" }, # 'TMUX - Leader - c' Create new Tab
+{ chars = "\u0006&", key = "W", mods = "Command" }, # 'TMUX - Leader - &' Close Tab
+{ chars = "\u0006x", key = "E", mods = "Command" }, # 'TMUX - Leader - x' Close Pane
+{ chars = "\u0006,", key = "R", mods = "Command" }, # 'TMUX - Leader - ,' Rename Tab
+{ chars = "\u00061", key = "Key1", mods = "Command" }, # 'TMUX - Leader - 1' Tab #
+{ chars = "\u00062", key = "Key2", mods = "Command" }, # 'TMUX - Leader - 2' Tab #
+{ chars = "\u00063", key = "Key3", mods = "Command" }, # 'TMUX - Leader - 3' Tab #
+{ chars = "\u00064", key = "Key4", mods = "Command" }, # 'TMUX - Leader - 4' Tab #
+{ chars = "\u00065", key = "Key5", mods = "Command" }, # 'TMUX - Leader - 5' Tab #
+{ chars = "\u00066", key = "Key6", mods = "Command" }, # 'TMUX - Leader - 6' Tab #
+{ chars = "\u00067", key = "Key7", mods = "Command" }, # 'TMUX - Leader - 7' Tab #
+{ chars = "\u00068", key = "Key8", mods = "Command" }, # 'TMUX - Leader - 8' Tab #
+{ chars = "\u00069", key = "Key9", mods = "Command" }, # 'TMUX - Leader - 9' Tab #
+{ chars = "\u00060", key = "Key0", mods = "Command" }, # 'TMUX - Leader - 0' Tab #
+{ chars = "\u0006l", key = "Right", mods = "Command" }, # 'TMUX - Leader - l' Jump Right
+{ chars = "\u0006h", key = "Left", mods = "Command" }, # 'TMUX - Leader - h' Jump Left
+{ chars = "\u0006k", key = "Up", mods = "Command" }, # 'TMUX - Leader - k' Jump Up
+{ chars = "\u0006j", key = "Down", mods = "Command" }, # 'TMUX - Leader - j' Jump Down
+{ chars = "\u0006[", key = "LBracket", mods = "Command" }, # 'TMUX - Leader - [' TMux Screen Nav
+{ chars = "\u0006%", key = "V", mods = "Command | Shift" }, # 'TMUX - Leader - %' VSplit
+{ chars = "\u0006\"",  key = "H", mods = "Command | Shift" }, # 'TMUX - Leader - "' HSplit
+]
 
 [window]
 decorations = "buttonless"
 dynamic_padding = false
-
-[window.padding]
-x = 18
-y = 16
+padding = { x = 18, y = 16 }
