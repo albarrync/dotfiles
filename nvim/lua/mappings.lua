@@ -44,6 +44,8 @@ vim.api.nvim_set_keymap('n', '<leader>dh', ':DiffviewFileHistory %<cr>', options
 -- Dispatch
 map('n', '<leader>df', ':Dispatch rspec %<cr>', options)
 map('n', '<leader>dt', ':Dispatch rspec<cr>', options)
+map('n', '<leader>sr', ':! standardrb % --fix<cr>', options)
+
 
 -- Harpoon
 local ui = require("harpoon.ui")
