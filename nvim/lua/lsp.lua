@@ -10,10 +10,6 @@ for type, icon in pairs(signs) do
 end
 vim.cmd('setlocal omnifunc=v:lua.vim.lsp.omnifunc')
 
-require'lspconfig'.html.setup {
-  filetypes = {"html", "eruby"},
-  capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
-}
 require'lspconfig'.dockerls.setup{
   capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
@@ -62,13 +58,13 @@ require'lspconfig'.lua_ls.setup{
 }
  -- If they're not working, try running `gem install solargraph` and `gem install ruby-lsp`
  -- ruby-lsp requires ruby version 2.7.3 or higher
--- require'lspconfig'.ruby_ls.setup{
---   capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
--- }
-require'lspconfig'.solargraph.setup{
-  cmd = { "/Users/alexb/.rbenv/shims/solargraph", "stdio"},
+require'lspconfig'.ruby_lsp.setup{
   capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
+-- require'lspconfig'.solargraph.setup{
+--   cmd = { "/Users/alexb/.rbenv/shims/solargraph", "stdio"},
+--   capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+-- }
 require'lspconfig'.standardrb.setup{
   capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 }

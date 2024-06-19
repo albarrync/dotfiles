@@ -19,6 +19,7 @@ cmp.setup({
     sources = cmp.config.sources({
       { name = 'copilot' },
       { name = 'nvim_lsp' },
+      { name = 'ruby_lsp' },
       { name = 'luasnip' }, -- For luasnip users.
     }, {
       { name = 'buffer' },

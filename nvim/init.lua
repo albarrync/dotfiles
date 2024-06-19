@@ -9,82 +9,78 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   })
 end
-vim.opt.rtp:prepend(lazypath)
 
+vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 
 require("lazy").setup({
-	'navarasu/onedark.nvim',
-	'onsails/lspkind-nvim',
-	{ 'weilbith/nvim-code-action-menu', cmd = 'CodeActionMenu' },
-	'williamboman/mason.nvim',
-	'williamboman/mason-lspconfig.nvim',
-	'neovim/nvim-lspconfig',
-	'zbirenbaum/copilot.lua',
-	'zbirenbaum/copilot-cmp',
-	'hrsh7th/nvim-cmp',
-	'hrsh7th/cmp-nvim-lsp',
-	'hrsh7th/cmp-vsnip',
-	'hrsh7th/vim-vsnip',
-	'hrsh7th/cmp-path',
-	'hrsh7th/cmp-calc',
-	'hrsh7th/cmp-cmdline',
-	'ray-x/cmp-treesitter',
-	'quangnguyen30192/cmp-nvim-tags',
-	'honza/vim-snippets',
-	"rafamadriz/friendly-snippets",
-	'windwp/nvim-autopairs',
-	'AndrewRadev/tagalong.vim',
-	'andymass/vim-matchup',
-  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
-	"sindrets/diffview.nvim",
-	{ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' },
-	'p00f/nvim-ts-rainbow',
-	'JoosepAlviste/nvim-ts-context-commentstring',
-	'romgrk/nvim-treesitter-context',
-	'SmiteshP/nvim-gps',
-	'moll/vim-node',
-	'editorconfig/editorconfig-vim',
-	'chrisbra/csv.vim',
-	'npxbr/glow.nvim',
-	'junegunn/vim-easy-align',
-	'mhartington/formatter.nvim',
-	'zdharma-continuum/zinit-vim-syntax',
-	'rust-lang/rust.vim',
-	'kyazdani42/nvim-web-devicons',
-	'ryanoasis/vim-devicons',
-	'feline-nvim/feline.nvim',
-	'romgrk/barbar.nvim',
-	'nvim-lua/plenary.nvim',
-	'nvim-lua/popup.nvim',
-	'nvim-telescope/telescope-fzy-native.nvim',
-	'nvim-telescope/telescope.nvim',
-	'nvim-telescope/telescope-project.nvim',
-	'BurntSushi/ripgrep',
-	'sharkdp/fd',
-	'kyazdani42/nvim-tree.lua',
-	'crivotz/nvim-colorizer.lua',
-	{ 'lewis6991/gitsigns.nvim', requires = 'nvim-lua/plenary.nvim' },
-	'rhysd/committia.vim',
-	'tversteeg/registers.nvim',
-	'kevinhwang91/nvim-hlslens',
-	'karb94/neoscroll.nvim',
-	'chaoren/vim-wordmotion',
-	'tpope/vim-commentary',
-	'tpope/vim-dispatch',
-	'tpope/vim-endwise',
-	'tpope/vim-fugitive',
-	'tpope/vim-haml',
-	'tpope/vim-jdaddy',
-	'tpope/vim-rails',
-	'tpope/vim-repeat',
-	'tpope/vim-surround',
-	'joshdick/onedark.vim',
-	'folke/todo-comments.nvim',
-	'numtostr/FTerm.nvim',
-	'luukvbaal/stabilize.nvim',
-	'ThePrimeagen/harpoon',
-  { "L3MON4D3/LuaSnip", version = "v2.*", build = "make install_jsregexp" }
+	'AndrewRadev/tagalong.vim', -- changes matching opposite html tag
+	'BurntSushi/ripgrep', -- goat
+	'JoosepAlviste/nvim-ts-context-commentstring', -- comments lines with 'gcc'
+	'SmiteshP/nvim-gps', -- shows context of cursor in statusline
+	'andymass/vim-matchup', -- better % functionality
+	'chaoren/vim-wordmotion', -- better word motion functionality
+	'chrisbra/csv.vim', -- csv viewer
+	'crivotz/nvim-colorizer.lua', -- colors
+	'editorconfig/editorconfig-vim', -- !
+	'folke/todo-comments.nvim', -- highlights comments
+	'honza/vim-snippets', -- general snippets
+	'hrsh7th/cmp-calc', -- cmp source for math
+	'hrsh7th/cmp-cmdline', -- cmp source for cmdline
+	'hrsh7th/cmp-nvim-lsp', -- cmp source for LSP
+	'hrsh7th/cmp-path', -- cmp source for paths
+	'hrsh7th/cmp-vsnip', -- cmp source for vsnip
+	'hrsh7th/nvim-cmp', -- completion engine
+	'hrsh7th/vim-vsnip', -- !
+	'junegunn/vim-easy-align', -- align from delimiters with 'ga'
+	'karb94/neoscroll.nvim', -- smooth scrolling
+	'nvim-tree/nvim-web-devicons', -- icons
+	'mhartington/formatter.nvim', -- format runner
+	'moll/vim-node', -- node utilities
+	'navarasu/onedark.nvim', -- color scheme
+	'neovim/nvim-lspconfig', -- lsp
+	'ellisonleau/glow.nvim', -- markdown
+	'numtostr/FTerm.nvim', -- floating terminal
+	'nvim-lua/plenary.nvim', -- lua functions
+	'nvim-lua/popup.nvim', -- working?
+	'nvim-telescope/telescope-fzy-native.nvim', -- fuzzy telescope
+	'nvim-telescope/telescope-project.nvim', -- projects telescope
+	'nvim-telescope/telescope.nvim', -- telescope
+	'onsails/lspkind-nvim', -- pictograms/icons
+	'quangnguyen30192/cmp-nvim-tags', -- !
+	'rafamadriz/friendly-snippets', -- snippets
+	'ray-x/cmp-treesitter', -- cmp source for treesitter
+	'rhysd/committia.vim', -- better commit window
+	'romgrk/barbar.nvim', -- buffer/tab bar plugin
+	'romgrk/nvim-treesitter-context', -- cursor context within buffer
+	'ryanoasis/vim-devicons', -- glyphs and icons
+	'sharkdp/fd', -- goat
+	'sindrets/diffview.nvim', -- diffs in vim buffers
+	'tpope/vim-commentary', -- comments
+	'tpope/vim-dispatch', -- tests
+	'tpope/vim-endwise', -- auto-add 'end's
+	'tpope/vim-fugitive', -- git wrapper 'Git'
+	'tpope/vim-haml', -- haml
+	'tpope/vim-jdaddy', -- json
+	'tpope/vim-rails', -- rails
+	'tpope/vim-repeat', -- better '.' functionality !
+	'tpope/vim-surround', -- surround shortcut
+	'williamboman/mason-lspconfig.nvim', -- mason lsp
+	'williamboman/mason.nvim', -- mason
+	'windwp/nvim-autopairs', -- auto-add symbols
+	'zbirenbaum/copilot.lua', -- copilot
+	'zdharma-continuum/zinit-vim-syntax', -- zsh syntax
+	{ 'lewis6991/gitsigns.nvim', requires = 'nvim-lua/plenary.nvim' }, -- show line authors
+	{ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }, -- treesitter
+	{ 'weilbith/nvim-code-action-menu', cmd = 'CodeActionMenu' }, -- !
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} }, -- indent
+  { 'L3MON4D3/LuaSnip', version = 'v2.*', build = 'make install_jsregexp', dependencies = { "rafamadriz/friendly-snippets" } }, -- snippets
+  { 'ThePrimeagen/harpoon', opts = {} }, -- file pinning
+  { 'kevinhwang91/nvim-hlslens', opts = {} }, -- highlight while searching
+  { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' }, opts = { theme = 'base16'} }, -- statusline
+  { 'nvim-tree/nvim-tree.lua', opts = {} }, -- nvim-tree
+  { 'tversteeg/registers.nvim', opts = {} }, -- registers
+  { 'zbirenbaum/copilot-cmp', opts = {} }, -- copilot
 })
 
 require('general')
@@ -93,14 +89,8 @@ require('mappings')
 require('onedark').load()
 
 require('plugins.barbar')
-require('plugins.copilot-cmp')
 require('plugins.copilot')
-require('plugins.feline')
 require('plugins.gitsigns')
-require('plugins.harpoon')
-require('plugins.hlslens')
 require('plugins.luasnip')
 require('plugins.mason')
 require('plugins.nvim-cmp')
-require('plugins.nvim-tree')
-require('plugins.registers')

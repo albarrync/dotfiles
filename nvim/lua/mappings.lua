@@ -30,7 +30,7 @@ map('n', '<leader>n', ':NvimTreeToggle<cr>', options)
 -- Telescope
 map('n', '<leader>ff', ':Telescope find_files<cr>', options)
 map('n', '<leader>fg', ':Telescope live_grep<cr>', options)
-map('n', '<leader>fb', ':Telescope buffers<cr>', options)
+map('n', '<leader>fb', ':Telescope current_buffer_fuzzy_find<cr>', options)
 
 -- Easy Align
 vim.api.nvim_set_keymap('x', 'ga', '<Plug>(EasyAlign)', {noremap = false, silent = false})
@@ -45,7 +45,6 @@ vim.api.nvim_set_keymap('n', '<leader>dh', ':DiffviewFileHistory %<cr>', options
 map('n', '<leader>df', ':Dispatch rspec %<cr>', options)
 map('n', '<leader>dt', ':Dispatch rspec<cr>', options)
 map('n', '<leader>sr', ':! standardrb % --fix<cr>', options)
-
 
 -- Harpoon
 local ui = require("harpoon.ui")
