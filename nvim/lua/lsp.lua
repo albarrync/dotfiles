@@ -61,10 +61,10 @@ require'lspconfig'.lua_ls.setup{
 require'lspconfig'.ruby_lsp.setup{
   capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
--- require'lspconfig'.solargraph.setup{
---   cmd = { "/Users/alexb/.rbenv/shims/solargraph", "stdio"},
---   capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
--- }
+require'lspconfig'.solargraph.setup{
+  cmd = { "/Users/alexb/.rbenv/shims/solargraph", "stdio"},
+  capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+}
 require'lspconfig'.standardrb.setup{
   capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
