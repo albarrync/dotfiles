@@ -39,7 +39,6 @@ require("lazy").setup({
 	'moll/vim-node', -- node utilities
 	'navarasu/onedark.nvim', -- color scheme
 	'neovim/nvim-lspconfig', -- lsp
-	'ellisonleau/glow.nvim', -- markdown
 	'numtostr/FTerm.nvim', -- floating terminal
 	'nvim-lua/plenary.nvim', -- lua functions
 	'nvim-lua/popup.nvim', -- working?
@@ -73,10 +72,11 @@ require("lazy").setup({
 	{ 'lewis6991/gitsigns.nvim', requires = 'nvim-lua/plenary.nvim' }, -- show line authors
 	{ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }, -- treesitter
 	{ 'weilbith/nvim-code-action-menu', cmd = 'CodeActionMenu' }, -- !
-  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} }, -- indent
   { 'L3MON4D3/LuaSnip', version = 'v2.*', build = 'make install_jsregexp', dependencies = { "rafamadriz/friendly-snippets" } }, -- snippets
   { 'ThePrimeagen/harpoon', opts = {} }, -- file pinning
+  { 'ellisonleau/glow.nvim', otps = {} }, -- markdown
   { 'kevinhwang91/nvim-hlslens', opts = {} }, -- highlight while searching
+  { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} }, -- indent
   { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' }, opts = { theme = 'base16'} }, -- statusline
   { 'nvim-tree/nvim-tree.lua', opts = {} }, -- nvim-tree
   { 'tversteeg/registers.nvim', opts = {} }, -- registers
