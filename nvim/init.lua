@@ -45,6 +45,7 @@ require("lazy").setup({
 	'nvim-telescope/telescope-fzy-native.nvim', -- fuzzy telescope
 	'nvim-telescope/telescope-project.nvim', -- projects telescope
 	'nvim-telescope/telescope.nvim', -- telescope
+  'nvim-tree/nvim-tree.lua', -- nvim-tree
 	'onsails/lspkind-nvim', -- pictograms/icons
 	'quangnguyen30192/cmp-nvim-tags', -- !
 	'rafamadriz/friendly-snippets', -- snippets
@@ -72,13 +73,12 @@ require("lazy").setup({
 	{ 'lewis6991/gitsigns.nvim', requires = 'nvim-lua/plenary.nvim' }, -- show line authors
 	{ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }, -- treesitter
 	{ 'weilbith/nvim-code-action-menu', cmd = 'CodeActionMenu' }, -- !
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} }, -- indent
   { 'L3MON4D3/LuaSnip', version = 'v2.*', build = 'make install_jsregexp', dependencies = { "rafamadriz/friendly-snippets" } }, -- snippets
   { 'ThePrimeagen/harpoon', opts = {} }, -- file pinning
-  { 'ellisonleau/glow.nvim', otps = {} }, -- markdown
+  { 'ellisonleau/glow.nvim', opts = {} }, -- markdown
   { 'kevinhwang91/nvim-hlslens', opts = {} }, -- highlight while searching
-  { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} }, -- indent
   { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' }, opts = { theme = 'base16'} }, -- statusline
-  { 'nvim-tree/nvim-tree.lua', opts = {} }, -- nvim-tree
   { 'tversteeg/registers.nvim', opts = {} }, -- registers
   { 'zbirenbaum/copilot-cmp', opts = {} }, -- copilot
 })
@@ -94,3 +94,4 @@ require('plugins.gitsigns')
 require('plugins.luasnip')
 require('plugins.mason')
 require('plugins.nvim-cmp')
+require('plugins.nvim-tree')
