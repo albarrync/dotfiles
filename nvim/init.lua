@@ -32,6 +32,7 @@ require("lazy").setup({
 	'hrsh7th/cmp-vsnip', -- cmp source for vsnip
 	'hrsh7th/nvim-cmp', -- completion engine
 	'hrsh7th/vim-vsnip', -- !
+  'saadparwaiz1/cmp_luasnip', -- cmp source for luasnip
 	'junegunn/vim-easy-align', -- align from delimiters with 'ga'
 	'karb94/neoscroll.nvim', -- smooth scrolling
 	'nvim-tree/nvim-web-devicons', -- icons
