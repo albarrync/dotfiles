@@ -51,3 +51,14 @@ cmp.setup({
     })
   })
 
+local lspkind = require('lspkind')
+cmp.setup {
+  formatting = {
+    format = lspkind.cmp_format({
+      mode = 'text_symbol',
+      maxwidth = 50,
+      ellipsis_char = '...',
+      show_labelDetails = true,
+    })
+  }
+}
