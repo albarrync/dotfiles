@@ -56,9 +56,10 @@ require'lspconfig'.pylsp.setup{
 require'lspconfig'.lua_ls.setup{
   capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
- -- If they're not working, try running `gem install solargraph` and `gem install ruby-lsp`
- -- ruby-lsp requires ruby version 2.7.3 or higher
+-- If they're not working, try running `gem install solargraph` and `gem install ruby-lsp`
+-- ruby-lsp requires ruby version 2.7.3 or higher and nvim 0.10.0
 require'lspconfig'.ruby_lsp.setup{
+  cmd = { "/Users/alexb/.rbenv/shims/ruby-lsp"},
   capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
 require'lspconfig'.solargraph.setup{
@@ -66,6 +67,7 @@ require'lspconfig'.solargraph.setup{
   capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
 require'lspconfig'.standardrb.setup{
+  cmd = { "/Users/alexb/.rbenv/shims/standardrb", "--lsp"},
   capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
 require'lspconfig'.tailwindcss.setup{
