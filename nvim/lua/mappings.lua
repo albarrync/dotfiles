@@ -23,6 +23,7 @@ map('n', '<Esc>', ':noh<cr>', options)
 map('n', '<Tab>', ':BufferNext<cr>', options)
 map('n', '<S-Tab>', ':BufferPrevious<cr>', options)
 map('n', '<leader>w', ':BufferClose<cr>', options)
+map('n', '<leader>W', ':BufferCloseAllButCurrent<cr>', options)
 
 -- NVim Tree
 map('n', '<leader>n', ':NvimTreeToggle<cr>', options)
@@ -57,3 +58,7 @@ vim.keymap.set("n", "<leader>h1", function() ui.nav_file(1) end)
 vim.keymap.set("n", "<leader>h2", function() ui.nav_file(2) end)
 vim.keymap.set("n", "<leader>h3", function() ui.nav_file(3) end)
 vim.keymap.set("n", "<leader>h4", function() ui.nav_file(4) end)
+
+-- Diagnostics
+vim.keymap.set("n", "<C-n>", vim.diagnostic.goto_next)
+vim.keymap.set("n", "<C-p>", vim.diagnostic.goto_prev)
